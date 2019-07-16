@@ -16,7 +16,7 @@ app.use(express.static("app"));
 // =============================================================
 require("./routes/supplier-routes.js")(app);
 require("./routes/htmlRoutes.js")(app);
-require("./routes/account-routes.js")(app);
+// require("./routes/account-routes.js")(app);
 
 // ensures that data in server does not get cleared
 var syncOptions = { force: false };
