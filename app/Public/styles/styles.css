@@ -1,0 +1,222 @@
+html {
+  overflow: hidden;
+}
+body {
+  position: relative;
+  margin: 0;
+  font-size: 26px;
+  font-family: 'Permanent Marker', cursive;
+ 
+} 
+
+.xyz{
+height: 100vh;
+transform-style: preserve-3d; 
+overflow-x:hidden;
+overflow-y:auto; 
+perspective: 1px;
+background-color: aqua; 
+}
+
+
+h1{
+  font-size: 300px;
+  text-align: center;
+  color:white;
+}
+  
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0%;
+  left: 0%;
+  background-color: #111;
+  background-image: url(https://images.unsplash.com/photo-1505489435671-80a165c60816?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+  background-position: 20px;
+  background-size:100%;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#menu{
+  
+  position:fixed;
+  top: 5%;
+  left: 2%;
+  color: white;
+  display:inline-block;
+  z-index: 9999; 
+}
+
+h3{
+  margin: -50px 10px 10px 10px;
+  border: 1px solid red;
+  border-left: none;
+  border-right: none;
+  border-width: 70%;
+  color: white; 
+  position: absolute;
+  left: 25%;
+}
+
+#card1{
+ 
+background-color: #818181;
+color: #f1f1f1;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+
+}
+
+  #card2{
+    background-color: #818181;
+    color: #f1f1f1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  #video{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+  #video2{
+    position: absolute;
+    top: 20%;
+    right: 70px;
+  }
+  
+  .carousel-inner img {
+    width: 100%;
+    height: 50%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.parallax-wrapper {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/2SCo9xSSW269oJegWUdwHc-650-80.jpg");
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+.parallax-wrapper2 {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    
+}
+.parallax-wrapper2::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-image: url("https://beforesandafters.com/wp-content/uploads/2019/05/CapvCap-e1557913128833-1024x528.jpg");
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+}
+
+.regular-wrapper {
+  width: 100vw;
+  height:100vh;
+  padding-top:20vh;
+  background-color: #111;
+  background-image: url("https://www.gannett-cdn.com/presto/2019/05/06/USAT/5a72df5b-8627-454e-9b97-108a667932d3-bfb1300_trlcomp_v246.1054.jpg?width=1280");
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+}
+.regular-wrapper2 {
+  width: 100vw;
+  height:100vh;
+  padding-top:20vh;
+  background-image: url("http://movies-and-tv.com/wp-content/uploads/2019/04/ccelebritiesfotomarvel-intro-e1556625768997.jpg");
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+}
+.regular-wrapper3{
+  background-color: #111;
+  border:solid;
+  border-color: red;
+  /* border-left: 50%; */
+}
+.content {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    background: #aaa;
+}
+
+.socal{
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto;
+  width: 13%; */
+  position:relative;
+  left: 45%;
+  top: 60%;
+}
+.card-body{
+  background-color: #818181;
+}
+
+#credit{
+  text-align: center;
+}
+.body1{
+margin: 20px 20px 20px 20px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
