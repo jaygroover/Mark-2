@@ -81,9 +81,9 @@ h2{
      
   }
 /*This changes the size of the image not the div child element of image2  */
-  .image2>img{
-    height: 150px;
-    width: 150px;
+  img{
+    height: 150px !important;
+    width: 150px !important;
 }
 
 .image2:hover{
@@ -101,6 +101,12 @@ h2{
     height:80px;
   }
 
+  #mainImage{
+    height: 400px !important;
+    width: 300px !important;  
+  }
+  
+
 
   </style>  
 </head>
@@ -114,7 +120,7 @@ h2{
     <div class="container-fluid" id="test">
             <div class = row>
                     <div class= "col-md-4">
-                    <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/ironman_lob_crd_01_4.jpg"  class="card-img" alt="...">      
+                    <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/ironman_lob_crd_01_4.jpg"  class="card-img" id="mainImage" alt="...">      
                       
                     </div>
                     <div class= "col-md-8">
@@ -134,11 +140,11 @@ h2{
                         <div class="row" id="name">
                                 
                            <div class="col-md-3 image2">
-                                <img src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/3/35/IronMan-EndgameProfile.jpg/revision/latest/scale-to-width-down/2000?cb=20190423175213"  class="card-img" alt="..."> 
+                            <a href="../charaters/ironMan.html"><img src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/3/35/IronMan-EndgameProfile.jpg/revision/latest/scale-to-width-down/2000?cb=20190423175213"  class="card-img" alt="..."></a> 
                                 <p>Iron Man</p>  
                            </div>
                            <div class="col-md-3 image2">
-                                <img src="https://www.writeups.org/wp-content/uploads/Obadiah-Stane-Iron-Man-movie-Jeff-Bridges-b.jpg"  class="card-img" alt="..."> 
+                            <a href="../charaters/ironMan.html"><img src="https://www.writeups.org/wp-content/uploads/Obadiah-Stane-Iron-Man-movie-Jeff-Bridges-b.jpg"  class="card-img" alt="..."></a> 
                                 <p>Obadiah Stane</p>
                            </div>
                            <div class="col-md-3 image2">
@@ -149,7 +155,7 @@ h2{
                         <div class="row" id="name1">
                        
                            <div class="col-md-3 image2">
-                                <img src="https://i.pinimg.com/originals/09/fe/de/09fede19eaeff447097c840f3b59d0f0.jpg"  class="card-img" alt="...">  
+                            <a href="../charaters/ironMan.html"><img src="https://i.pinimg.com/originals/09/fe/de/09fede19eaeff447097c840f3b59d0f0.jpg"  class="card-img" alt="..."></a>  
                                 <p>Pepper Potts</p> 
                            </div>
                            <div class="col-md-3 image2">
