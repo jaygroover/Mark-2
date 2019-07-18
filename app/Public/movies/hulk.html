@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Iron Man</title>
+    <title>The Hulk</title>
   <style>
-  #test{
+   #test{
     opacity: .99;
     background-color: gray;  
     border: 2px solid black;
@@ -74,32 +74,92 @@ h2{
     cursor: pointer;
   }
 
-  .image2{
-     margin: 20px 20px 20px 20px;
-    transition: margin-top 500ms ease-in-out;
+   .image2{
+     /* margin: 20px 20px 20px 20px; */
+    transition: margin-top 200ms ease-in-out; 
 
      
   }
-/*This changes the size of the image not the div child element of image2  */
-  .image2>img{
-    height: 150px;
-    width: 150px;
-}
+/* This changes the size of the image not the div child element of image2  */
+  img{
+    height: 150px !important;
+    width: 150px !important;
+} 
 
 .image2:hover{
-    margin-top: -.90px;
+    margin-top: -10px;
     cursor: pointer;
 }
 
 
-  #name,#name1{
-      text-align: center;
-      height:200px;
+    #name,#name1{
+       text-align: center; 
+        /* height:200px; */
+  }  
+
+   #row1,#row2{
+    height:80px;
+  } 
+
+   #mainImage{
+    height: 420px !important;
+    width: 320px !important;  
+  } 
+
+  a{
+      color: navy;
   }
 
-  #row1,#row2{
-    height:80px;
+  #streaming{
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%; 
+      background-color: gray;
+      
+    }
+    
+.button:hover{
+    background-color: black;
+    color: white;
+}
+  .button{
+    background-color: grey;
+    border-color: black;
+    color: blue;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+      
   }
+
+  .titleLink0{
+      text-align: center;
+      color: brown;
+      border-top: 20px solid brown;
+      border-bottom: 20px solid brown;
+      padding-top: 60px;
+      padding-bottom: 50px;
+      
+  }
+     
+      
+
+  #titleLink{
+    width:200px;
+    margin-top:-100px;
+    margin-left:5px;
+    background:grey;
+    color:white;
+  }
+
+  #bottom{
+    border-bottom: 5px solid red;
+  }
+
 
 
   </style>  
@@ -114,7 +174,7 @@ h2{
     <div class="container-fluid" id="test">
             <div class = row>
                     <div class= "col-md-4">
-                    <img src="https://i.pinimg.com/originals/68/a1/73/68a173071fcf8ead7d3bb7d686c962be.jpg"  class="card-img" alt="...">      
+                    <img src="https://i.pinimg.com/originals/68/a1/73/68a173071fcf8ead7d3bb7d686c962be.jpg"  class="card-img" id="mainImage" alt="...">      
                       
                     </div>
                     <div class= "col-md-8">
@@ -130,38 +190,38 @@ h2{
                                                                     112 min</li>
                                                                     <li>RELEASE DATE
                                                                             June 13, 2008</li>  
-                                                                            <li>Rated: 67% Fresh</li>
+                                                                            <a href="https://www.rottentomatoes.com/m/the_incredible_hulk">Rated: 67% Fresh</li></a>
                                             </ul>
                             </div>
                         </div>
                         <div class="row" id="name">
                                 
                            <div class="col-md-3 image2">
-                                <img src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/3/35/IronMan-EndgameProfile.jpg/revision/latest/scale-to-width-down/2000?cb=20190423175213"  class="card-img" alt="..."> 
-                                <p>Iron Man</p>  
+                                <a href="#"><img src="https://i.pinimg.com/originals/2b/d0/df/2bd0dfb4b7adefc68cccd9428240f48d.jpg"  class="card-img" alt="..."></a> 
+                                <p>Bruce Banner</p>  
                            </div>
                            <div class="col-md-3 image2">
-                                <img src="https://www.writeups.org/wp-content/uploads/Obadiah-Stane-Iron-Man-movie-Jeff-Bridges-b.jpg"  class="card-img" alt="..."> 
-                                <p>Obadiah Stane</p>
+                                <a href="#"><img src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/e/e7/Betty_Ross_infobox.jpg/revision/latest?cb=20160101141249"  class="card-img" alt="..."></a> 
+                                <p>Betty Ross</p>
                            </div>
                            <div class="col-md-3 image2">
-                                <img src="https://steamuserimages-a.akamaihd.net/ugc/575652271005040524/A7808E8101D2B7301EFE96F3C5025E8E7DFBF896/"  class="card-img" alt="..."> 
-                                <p>War Machine</p>
+                                <a href="#"><img src="https://vignette.wikia.nocookie.net/marvel-cinematic-universe/images/0/0c/Thaddeus_Ross.png/revision/latest?cb=20120602130216"  class="card-img" alt="..."></a> 
+                                <p>Thaddeus Ross</p>
                            </div> 
                         </div>
                         <div class="row" id="name1">
                        
                            <div class="col-md-3 image2">
-                                <img src="https://i.pinimg.com/originals/09/fe/de/09fede19eaeff447097c840f3b59d0f0.jpg"  class="card-img" alt="...">  
-                                <p>Pepper Potts</p> 
+                                <a href="#"><img src="https://i.pinimg.com/originals/f6/8c/9e/f68c9eccf95b70666785020971db5e8a.png"  class="card-img" alt="..."></a>  
+                                <p>Emil Blonsky "The Abomination"</p> 
                            </div>
                            <div class="col-md-3 image2">
-                                <img src="https://vignette.wikia.nocookie.net/ironman/images/6/67/Photo%2857%29.jpg/revision/latest?cb=20130520061716"  class="card-img" alt="..."> 
-                                <p>Phil Coulson</p>
+                                <a href="#"><img src="https://vignette.wikia.nocookie.net/marvel-cinematic-universe-database/images/b/bc/Samuel_Sterns.png/revision/latest?cb=20121123034026"  class="card-img" alt="..."></a> 
+                                <p>Samuel Sterns</p>
                            </div>
                            <div class="col-md-3 image2">
-                                <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/33/1502794321-nick-fury-samuel-l-jackson-arms-crossed.jpg?crop=0.626xw:1xh;center,top&resize=480:*"  class="card-img" alt="..."> 
-                                <p>Nick Fury</p>
+                                <a href="#"><img src="https://vignette.wikia.nocookie.net/disney/images/5/5f/MCU_Doc_Samson.jpg/revision/latest?cb=20180319093715"  class="card-img" alt="..."></a> 
+                                <p> Dr. Leonard Samson</p>
                            </div> 
                         </div>
                         <!-- </div> -->
@@ -249,19 +309,34 @@ h2{
                 <br>
                 <br>
                 <br>
-                <h3>The Incredible Hulk Trailer //</h3> 
+                <h3>The Incredible Hulk//</h3> 
         <div class="row">
             <div class="col-md-12">
                     <iframe id="video" width="1020" height="545" src="https://www.youtube.com/embed/MdAiiNQpzn4" allowfullscreen alt="">
                     </iframe>
             </div>
         </div> 
-        
-        
+
+        <br>
+            <br>
+                <br>
+                    <br>
+     <div class="row">
+         <div class="col-md-12 titleLink0">
+             <h1 id="titleLink">View Now:</h1>
+             <br>
+                <br>
+                <a href="https://www.amazon.com/gp/product/B003KJF2WE/ref=atv_feed_catalog?tag=rottetomao_aiv_mv-20"><button class="button">Amazon</button></a>
+                    <a href="https://itunes.apple.com/movie/the-incredible-hulk/id284829497?ign-mpt=uo%3D5"><button class="button">iTunes</button></a>
+                        <a href="https://www.fandangonow.com/details/1MV97e41528d800e3a37bc354869c42ce1a"><button class="button">Fandango</button></a>
+                            <a href="https://www.vudu.com/content/movies/details/The-Incredible-Hulk/140473"><button class="button">Vudu</button></a>
+              </div>   
+         </div>
+     </div>   
                                 
                                 
                       
-    </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
     <script>

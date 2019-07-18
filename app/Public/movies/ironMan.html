@@ -74,38 +74,91 @@ h2{
     cursor: pointer;
   }
 
-  .image2{
-     margin: 20px 20px 20px 20px;
-    transition: margin-top 500ms ease-in-out;
+   .image2{
+     /* margin: 20px 20px 20px 20px; */
+    transition: margin-top 200ms ease-in-out; 
 
      
   }
-/*This changes the size of the image not the div child element of image2  */
+/* This changes the size of the image not the div child element of image2  */
   img{
     height: 150px !important;
     width: 150px !important;
-}
+} 
 
 .image2:hover{
-    margin-top: -.90px;
+    margin-top: -10px;
     cursor: pointer;
 }
 
 
-  #name,#name1{
-      text-align: center;
-      height:200px;
-  }
+    #name,#name1{
+       text-align: center; 
+        /* height:200px; */
+  }  
 
-  #row1,#row2{
+   #row1,#row2{
     height:80px;
+  } 
+
+   #mainImage{
+    height: 420px !important;
+    width: 320px !important;  
+  } 
+
+  a{
+      color: navy;
   }
 
-  #mainImage{
-    height: 400px !important;
-    width: 300px !important;  
+  #streaming{
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%; 
+      background-color: gray;
+      
+    }
+    
+.button:hover{
+    background-color: black;
+    color: white;
+}
+  .button{
+    background-color: grey;
+    border-color: black;
+    color: blue;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+      
   }
-  
+
+  .titleLink0{
+      text-align: center;
+      color: brown;
+      border-top: 20px solid brown;
+      border-bottom: 20px solid brown;
+      padding-top: 60px;
+      padding-bottom: 50px;
+      
+  }
+     
+      
+
+  #titleLink{
+    width:200px;
+    margin-top:-100px;
+    margin-left:5px;
+    background:grey;
+    color:white;
+  }
+
+  #bottom{
+    border-bottom: 5px solid red;
+  }
 
 
   </style>  
@@ -133,41 +186,41 @@ h2{
                                             <li>RATING PG-13</li>
                                             <li>Run time 126 min</li>
                                             <li>Relese Date: May 2, 2008</li> 
-                                            <li>Rated: 93% Fresh</li>
+                                            <a href="https://www.rottentomatoes.com/m/iron_man">Rated: 93% Fresh</li></a>
                                             </ul>
                             </div>
                         </div>
                         <div class="row" id="name">
                                 
-                           <div class="col-md-3 image2">
+                           <div class="col-md-4 image2">
                             <a href="../charaters/ironMan.html"><img src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/3/35/IronMan-EndgameProfile.jpg/revision/latest/scale-to-width-down/2000?cb=20190423175213"  class="card-img" alt="..."></a> 
                                 <p>Iron Man</p>  
                            </div>
-                           <div class="col-md-3 image2">
+                           <div class="col-md-4 image2">
                             <a href="../charaters/ironMan.html"><img src="https://www.writeups.org/wp-content/uploads/Obadiah-Stane-Iron-Man-movie-Jeff-Bridges-b.jpg"  class="card-img" alt="..."></a> 
                                 <p>Obadiah Stane</p>
                            </div>
-                           <div class="col-md-3 image2">
+                           <div class="col-md-4 image2">
                                 <img src="https://steamuserimages-a.akamaihd.net/ugc/575652271005040524/A7808E8101D2B7301EFE96F3C5025E8E7DFBF896/"  class="card-img" alt="..."> 
                                 <p>War Machine</p>
                            </div> 
                         </div>
                         <div class="row" id="name1">
                        
-                           <div class="col-md-3 image2">
+                           <div class="col-md-4 image2">
                             <a href="../charaters/ironMan.html"><img src="https://i.pinimg.com/originals/09/fe/de/09fede19eaeff447097c840f3b59d0f0.jpg"  class="card-img" alt="..."></a>  
                                 <p>Pepper Potts</p> 
                            </div>
-                           <div class="col-md-3 image2">
+                           <div class="col-md-4 image2">
                                 <img src="https://vignette.wikia.nocookie.net/ironman/images/6/67/Photo%2857%29.jpg/revision/latest?cb=20130520061716"  class="card-img" alt="..."> 
                                 <p>Phil Coulson</p>
                            </div>
-                           <div class="col-md-3 image2">
+                           <div class="col-md-4 image2">
                                 <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/33/1502794321-nick-fury-samuel-l-jackson-arms-crossed.jpg?crop=0.626xw:1xh;center,top&resize=480:*"  class="card-img" alt="..."> 
                                 <p>Nick Fury</p>
                            </div> 
                         </div>
-                        <!-- </div> -->
+                        
 
                         
                      
@@ -179,7 +232,7 @@ h2{
             
                    <div class="row">
                         <div class="col-md-12">
-                          <h2>Full Synopsis</h2>
+                          <h2>Full Synopsis</h2> 
                           <p>A convoy of military Humvees drives across the Afghanistan desert. In one of them is billionaire weapons developer Tony Stark (Robert Downey Jr.), riding with soldiers on duty. He is joking with some members of a convoy who seem to be genuinely amused by his persona and his flamboyant public image. Suddenly, the convoy is ambushed by unseen gunmen. The soldiers fight to defend themselves but are quickly killed. Tony flees the Humvee, taking refuge behind a large rock. Moments later, a missile lands nearby and explodes, but not before Tony sees the Stark Industries logo painted on it. A small amount of shrapnel penetrates his body armor and he is thrown backwards, losing consciousness.</p>  
                           <p>Las Vegas, 36 hours earlier</p> 
                           <p>Tony Stark is about to receive the Apogee Award in Las Vegas. A presentation documents Tony's life story: born the son of legendary weapons developer Howard Stark, Tony is a child prodigy who built his first circuit board when he was four years old, his first V8 engine when he was six, and graduated summa cum laude from MIT when he was 17. His parents were killed in a car accident in 1991, and when he was 21, he became CEO of Stark Industries, where he is to this day. Colonel James "Rhodey" Rhodes (Terrence Howard) prepares to present Tony the award, but Tony is not in attendance. Tony's right-hand man (and his father's former partner) Obadiah Stane (Jeff Bridges) accepts the award in Tony's stead. Rhodey later finds Tony partying in a casino. On his way out, a reporter named Christine Everhart (Leslie Bibb) approaches Stark with some questions regarding the ethics of his weapons business. Stark deflects her questions with some swift quips and the two end up spending the night together at Tony's oceanfront house in Malibu.</p>
@@ -259,6 +312,21 @@ h2{
                     </iframe>
             </div>
         </div> 
+        <br>
+        <br>
+            <br>
+                <br>
+ <div class="row">
+     <div class="col-md-12 titleLink0">
+         <h1 id="titleLink">View Now:</h1>
+         <br>
+            <br>
+            <a href="https://www.amazon.com/gp/product/B078YFK2G3/ref=atv_feed_catalog?tag=rottetomao_aiv_mv-20"><button class="button">Amazon</button></a>
+                <a href="https://itunes.apple.com/movie/iron-man/id688163154?ign-mpt=uo%3D5"><button class="button">iTunes</button></a>
+                    <a href="https://www.fandangonow.com/details/1MV34e6bc69044e5c5d057a1bfacafceef2"><button class="button">Fandango</button></a>
+                        <a href="https://www.vudu.com/content/movies/details/Iron-Man/141479"><button class="button">Vudu</button></a>
+          </div>   
+     </div>
         
         
                                 
