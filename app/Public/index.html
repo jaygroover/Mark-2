@@ -12,7 +12,7 @@
     </head>
 
     <body>
-      
+      <div class="span">
       <div style="font-size:30px;cursor:pointer" id="menu" onclick="openNav()">&#9776;</div>   
       <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -75,9 +75,10 @@
           <br>
           <br>
           <h3>Spider Man Far From Home //</h3> 
-         
+          <div class="span">
           <iframe id="video" width="1020" height="545" src="https://www.youtube.com/embed/Nt9L1jCKGnE" allowfullscreen alt="">
           </iframe>
+        </div>
           <br>
           <br>
           <br>
@@ -166,11 +167,28 @@
         </div>
         
       </div> 
+      </div>
     
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Script -->
   <script src="../Public/js/app.js"></script>
+
+  <script>
+  $(document).ready(function(){
+
+  timeIn()
+$(".span").hide();
+$("body").css("background-image","url(https://media.giphy.com/media/NUsKoYiGm1RPHl1eWM/giphy.gif)");
+$("body").css("background-size","cover");
+
+
+function timeIn(){
+  setTimeout(function(){ $(".span").show(); }, 4000);
+  
+};
+});
+  </script>
 
     </body>
     </html>
