@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="../styles/movies.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Phase 4</title>
+
+    <style>
+
+body{
+    /* background-image: url(https://d9np3dj86nsu2.cloudfront.net/image/0c77b130e0a9d98c838ba8570a226de0);    */
+    background-color: black;
+   }       
+    #test{
+       opacity: .99;
+       background-color: gray;  
+       border: 2px solid black;
+       border-style: solid;
+       padding: 2%;
+       height: auto;
+       color:white;
+       width: 75%; 
+       
+   }
+
+   .header{
+      
+      width: 100%;
+      height: 30vh;
+      background-image: url("https://mcucosmic.com/wp-content/uploads/2019/03/marvel-studios-phase-4-top-1024x576.jpg");
+      background-size: cover;
+      background-position:20px;
+      background-position-y: 71%;
+    }
+
+    #map{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #navbar {
+     overflow: hidden;
+     background-color: #333;
+   }
+
+   #navbar a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+   }
+   
+   #navbar a:hover {
+     background-color: #ddd;
+     color: black;
+   }
+   
+   #navbar a.active {
+     background-color: #4CAF50;
+     color: white;
+   }
+
+   .sticky {
+     position: fixed;
+     top: 0;
+     width: 100%;
+   }
+   
+   .sticky + .content {
+     padding-top: 60px;
+   }
+
+   .sidenav a {
+       padding: 8px 8px 8px 32px;
+       text-decoration: none;
+       font-size: 25px;
+       color: #818181;
+       display: block;
+       transition: 0.3s;
+       
+     }
+   
+     .sidenav a:hover {
+       color: #f1f1f1;
+     }
+   
+     .sidenav .closebtn {
+       position: absolute;
+       top: 0;
+       right: 25px;
+       font-size: 36px;
+       margin-left: 50px;
+     }
+   
+     .sidenav {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 9999;
+       top: 0%;
+       left: 0%;
+       background-color: #111;
+       background-image: url(https://images.unsplash.com/photo-1505489435671-80a165c60816?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+       background-position: 20px;
+       background-size:100%;
+       background-attachment: fixed;
+       overflow-x: hidden;
+       transition: 0.5s;
+       padding-top: 60px;
+       text-align: left;
+     }
+     
+     #menu{
+       
+       position:absolute;
+       top: 5%;
+       left: 2%;
+       color: white;
+       display:inline-block;
+       z-index: 9999; 
+     }
+   
+     .banner{
+       width: 100%;
+       height: 40vh;
+       background-image: url("https://superheromoviesranked.files.wordpress.com/2014/07/whxoqergj763l9c1hj4almeogmh.jpg?w=820&h=312&crop=1");
+       background-size: cover;
+       background-position:20px;
+     }
+
+     #border{
+        text-align: center;
+      color: navy;
+      border-top: 20px solid navy;
+      border-bottom: 20px solid navy;
+      padding-top: 60px;
+      padding-bottom: 50px;
+     }
+
+     .border2{
+        text-align: center;
+      color: navy;
+      /* border-top: 5px solid brown; */
+      border-bottom: 5px solid brown;
+      padding-top: 60px;
+      padding-bottom: 60px;
+     }
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div style="font-size:30px;cursor:pointer" id="menu" onclick="openNav()">&#9776;</div>   
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../index.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLd5gvV5XowKolcsdvo1vNorEMkOndqjcE2jp_hJ5JZDgNu60a" alt="Girl in a jacket" style="width:20px;height:20px;">Home</a>
+            <a href="#"><img src="https://i.pinimg.com/originals/02/8f/07/028f0724e4520d93f7f45272b8ef3076.jpg" alt="Girl in a jacket" style="width:20px;height:20px;">Character Page</a>
+          <a href="#"><img src="https://icons-for-free.com/iconfiles/png/512/bow+and+arrow+hawkeye+marvel+icon-1320085978912614688.png" alt="Girl in a jacket" style="width:20px;height:20px;"> Comic's Page</a>
+          <a href="#"><img src="https://cdn.iconscout.com/icon/free/png-256/the-punisher-marvel-super-hero-earth-saver-avenger-28703.png" alt="Girl in a jacket" style="width:20px;height:20px;"> MCU Time Line</a>
+          <a href="#"><img src="https://seeklogo.com/images/M/marvel-comics-logo-31D9B4C7FB-seeklogo.com.png" alt="Girl in a jacket" style="width:20px;height:20px;"> online media</a>
+          <a href="#"><img src="https://i.pinimg.com/originals/02/8f/07/028f0724e4520d93f7f45272b8ef3076.jpg" alt="Girl in a jacket" style="width:20px;height:20px;"> Live Chat</a>
+          <a href="#"><img src="http://icons.iconarchive.com/icons/fasticon/shop-cart/512/shop-cart-icon.png" alt="Girl in a jacket" style="width:20px;height:20px;"> M-Shop</a>
+          </div>           
+        </div>
+              
+              <div id="navbar">
+                <a href="../movies/movies.html">Phase I</a>
+                <a href="../movies/movies.html">Phase II</a>
+                <a href="../movies/movies.html">Phase III</a>
+                <!-- <div class="span" id="newPhase"> -->
+                <a href="#">Phase IV</a id="newPhase2">
+            <!-- </div> -->
+              </div>
+  
+        <div class="container-fluid" id="test">
+            <div class="row">
+                <div class="col-md-12" id="border">
+                        <img src="https://static1.squarespace.com/static/51b3dc8ee4b051b96ceb10de/51ce6099e4b0d911b4489b79/5d33b2e2262a0000015f3426/1563742970738/img_1534.jpg?format=2500w" id="map" alt="Spider-Man Trailer" style="width:100%;height:545px;"  ></a > 
+                </div>
+            </div>
+
+            <br>
+                <br>
+            <div class="row border2">
+                <div class="col-md-4">
+                    <img src="https://cdn2-www.comingsoon.net/assets/uploads/2019/07/blackwidow_card.jpg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                    <h4>Release Date: May 1, 2020</h4>
+                </div>
+                <div class="col-md-8">
+                        <ul style="list-style-type: none">
+                                <li>DIRECTED BY: Jon Watts</li>
+                                <li>WRITTEN BY</li>
+                                <li>Chris McKenna & Erik Sommers</li>
+                                <li>RATING PG-13</li>
+                                <li>Run time 129 min</li>
+                                <li>Relese Date: July 2, 2019</li> 
+                                
+                                    </ul>
+                </div>
+            </div>
+
+            <br>
+                <br>
+                    <br>
+            <div class="row  border2">
+                    <div class="col-md-4">
+                        <img src="https://i.gadgets360cdn.com/large/falcon-winter-solider-logo-disney-plus_1563671778666.jpg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                        <h4>Release Date: Fall 2020</h4>
+                    </div>
+                    <div class="col-md-8">
+                            <ul style="list-style-type: none">
+                                    <li>DIRECTED BY: Jon Watts</li>
+                                    <li>WRITTEN BY</li>
+                                    <li>Chris McKenna & Erik Sommers</li>
+                                    <li>RATING PG-13</li>
+                                    <li>Run time 129 min</li>
+                                    <li>Relese Date: July 2, 2019</li> 
+                                    </ul>
+                    </div>
+                </div>
+
+                <br>
+                    <br>
+                        <br>
+
+                <div class="row  border2">
+                        <div class="col-md-4">
+                            <img src="https://la.epeak.in/wp-content/uploads/2019/07/Marvels-Eternals-Cast-Revealed-Led-by-Angelina-Jolie.jpg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                            <h4>Release Date: November 6, 2020</h4>
+                        </div>
+                        <div class="col-md-8">
+                                <ul style="list-style-type: none">
+                                        <li>DIRECTED BY: Jon Watts</li>
+                                        <li>WRITTEN BY</li>
+                                        <li>Chris McKenna & Erik Sommers</li>
+                                        <li>RATING PG-13</li>
+                                        <li>Run time 129 min</li>
+                                        <li>Relese Date: July 2, 2019</li> 
+                                        </ul>
+                        </div>
+                    </div>
+        
+                    <br>
+                        <br>
+                            <br> 
+                            
+                            <div class="row  border2">
+                                    <div class="col-md-4">
+                                        <img src="https://chaibisket.com/wp-content/uploads/2019/07/shang.jpg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                                        <h4>Release Date: February 12, 2021</h4>
+                                    </div>
+                                    <div class="col-md-8">
+                                            <ul style="list-style-type: none">
+                                                    <li>DIRECTED BY: Jon Watts</li>
+                                                    <li>WRITTEN BY</li>
+                                                    <li>Chris McKenna & Erik Sommers</li>
+                                                    <li>RATING PG-13</li>
+                                                    <li>Run time 129 min</li>
+                                                    <li>Relese Date: July 2, 2019</li> 
+                                                    </ul>
+                                    </div>
+                                </div>
+                    
+                                <br>
+                                    <br>
+                                        <br>  
+
+                    <div class="row  border2">
+                        <div class="col-md-4">
+                            <img src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/2/20/Wanda_Vision_Logo.jpg/revision/latest/scale-to-width-down/2000?cb=20190721094711" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                                <h4>Release Date: Spring 2021</h4>
+                                    </div>
+                                <div class="col-md-8">
+                                        <ul style="list-style-type: none">
+                                                <li>DIRECTED BY: Jon Watts</li>
+                                                <li>WRITTEN BY</li>
+                                                <li>Chris McKenna & Erik Sommers</li>
+                                                <li>RATING PG-13</li>
+                                                <li>Run time 129 min</li>
+                                                <li>Relese Date: July 2, 2019</li> 
+                                                </ul> 
+                                    </div>
+                                        </div>
+                                
+                                    <br>
+                                        <br>
+                                            <br>  
+                                    <div class="row  border2">
+                                        <div class="col-md-4">
+                                            <img src="https://thesquad.com.br/wp-content/uploads/2019/07/Doctor-Strange-2-Movie-Multiverse-Of-Madness-1.jpg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                                                <h4>Release Date: May 7, 2021</h4>
+                                                    </div>
+                                                <div class="col-md-8">
+                                                        <ul style="list-style-type: none">
+                                                                <li>DIRECTED BY: Jon Watts</li>
+                                                                <li>WRITTEN BY</li>
+                                                                <li>Chris McKenna & Erik Sommers</li>
+                                                                <li>RATING PG-13</li>
+                                                                <li>Run time 129 min</li>
+                                                                <li>Relese Date: July 2, 2019</li> 
+                                                                </ul>
+                                                    </div>
+                                                        </div>
+                                            
+                                                        <br>
+                                                            <br>
+                                                                <br>  
+                                            <div class="row  border2">
+                                                 <div class="col-md-4">
+                                                    <img src="http://cdn.collider.com/wp-content/uploads/2019/07/loki-logo-slice-600x200.jpg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                                                        <h4>Release Date: Spring 2021</h4>
+                                                            </div>
+                                                                <div class="col-md-8">
+                                                                        <ul style="list-style-type: none">
+                                                                                <li>DIRECTED BY: Jon Watts</li>
+                                                                                <li>WRITTEN BY</li>
+                                                                                <li>Chris McKenna & Erik Sommers</li>
+                                                                                <li>RATING PG-13</li>
+                                                                                <li>Run time 129 min</li>
+                                                                                <li>Relese Date: July 2, 2019</li> 
+                                                                                </ul>
+                                                                </div>
+                                                                    </div>
+                                                        
+                                                                    <br>
+                                                                        <br>
+                                                                            <br>                               
+                                            <div class="row  border2">
+                                                <div class="col-md-4">
+                                                    <img src="https://media.comicbook.com/2019/07/marvel-studios-what-if-logo-1179757-1280x0.jpeg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                                                        <h4>Release Date: Summer 2021</h4>
+                                                            </div>
+                                                                <div class="col-md-8">
+                                                                        <ul style="list-style-type: none">
+                                                                                <li>DIRECTED BY: Jon Watts</li>
+                                                                                <li>WRITTEN BY</li>
+                                                                                <li>Chris McKenna & Erik Sommers</li>
+                                                                                <li>RATING PG-13</li>
+                                                                                <li>Run time 129 min</li>
+                                                                                <li>Relese Date: July 2, 2019</li> 
+                                                                                </ul>                          
+                                                                    </div>
+                                                                        </div>
+                                                                                           
+                                                                        <br>
+                                                                            <br>
+                                                                                <br>                               
+                                                <div class="row  border2">
+                                                    <div class="col-md-4">
+                                                        <img src="https://i.ytimg.com/vi/VsKf2uBGlyY/maxresdefault.jpg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                                                                <h4>Release Date: Fall 2021</h4>
+                                                                    </div>
+                                                                        <div class="col-md-8">
+                                                                                <ul style="list-style-type: none">
+                                                                                        <li>DIRECTED BY: Jon Watts</li>
+                                                                                        <li>WRITTEN BY</li>
+                                                                                        <li>Chris McKenna & Erik Sommers</li>
+                                                                                        <li>RATING PG-13</li>
+                                                                                        <li>Run time 129 min</li>
+                                                                                        <li>Relese Date: July 2, 2019</li> 
+                                                                                        </ul>                                                        
+                                                                            </div>
+                                                                                </div>
+                                                                                                                                   
+                                                                                <br>
+                                                                                    <br>
+                                                                                        <br>                        
+                                                    <div class="row  border2">
+                                                        <div class="col-md-4">
+                                                            <img src="https://media.comicbook.com/2019/07/thor-love-and-thunder-logo-1179793-1280x0.jpeg" id="poster" class="card-img" alt="..." style="width:300px;height:300px;" ></a> 
+                                                                <h4>Release Date: November 5, 2021</h4>
+                                                                    </div>
+                                                                        <div class="col-md-8">
+                                                                                <ul style="list-style-type: none">
+                                                                                        <li>DIRECTED BY: Jon Watts</li>
+                                                                                        <li>WRITTEN BY</li>
+                                                                                        <li>Chris McKenna & Erik Sommers</li>
+                                                                                        <li>RATING PG-13</li>
+                                                                                        <li>Run time 129 min</li>
+                                                                                        <li>Relese Date: July 2, 2019</li> 
+                                                                                        </ul>                                                                                                    
+                                                                            </div>
+                                                                                </div>
+                                                                                                                                                                               
+                                                                                    <br>
+                                                                                        <br>
+                                                                                            <br>               
+
+        </div>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Script -->
+<script src="../js/app.js"></script>
+        </body>
+        </html>
+               
