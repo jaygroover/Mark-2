@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marvel Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    
+
+    <style>
+    
+
+    
+    </style>
+</head>
+<body>
+    <div class="row">
+
+        <div class="col-lg-4 order-lg-1 order-3">
+  
+          <div class="table card" id="events-table"  style="top: 20px; display: block; width: 33%; position: fixed">
+        
+  
+          </div>
+  
+        </div>
+  
+        <div class="col-lg-5 order-lg-2 order-sm-1 order-1" id = "main-search">
+  
+              <div id="col-cent">
+  
+                <h1><span>Jam Search</span></h1>
+                <p class="intro">Search music from all of your favorite bands</p>
+                <p class="intro">Enter your favorite artist to search</p>
+                
+            <section>
+              <form id="search-form" name="search-form">
+                <div class="input-group mb-3">
+                  <input type="search" id="query" class=" form-control" placeholder="search your favorite bands...">
+                  <div class="input-group-append">
+                    <input id="select-artist" class="btn" type="submit" value="">
+                  </div>
+                </div>
+                <div class="icons">
+                  <a href="https://www.facebook.com/pg/JamSearch912/photos/?tab=album&album_id=285797105665764"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40">
+                  </a>
+                  <a id="bit"> <img alt="Bands in town" src="assets/images/bit.png" width="40" height="40">
+                  </a>
+                  <a href="https://www.youtube.com"> <img alt="youtube" src="assets/images/tube.png" width="40" height="40">
+                  </a>
+                </div>
+                <p class = "welcome" id = "welcome-message"></p>
+              </div>
+            </form>
+  
+  
+            <ul id="results"></ul>
+            <div id="buttons"></div>
+          </section>
+        </div>
+        <div class="col-lg-3 order-lg-3 order-sm-2 order-2">
+  
+          <div id="artist-div" style="position: fixed"></div>
+        </div>
+  
+  
+      </div>
+  
+  
+    </div>
+  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Script -->
+  <!-- <script src="../Public/js/app.js"></script> -->
+
+  <script>
+      $(document).ready(function () {
+  //default state
+  $("#youtube-result").hide();
+  $("#artist-review").hide();
+  $(".wrap").hide();
+  //On Click for Modal to Hide on Submit Click
+  $("#submit").on("click", function () {
+
+    $(".wrap").hide();
+    $(".img").show();
+    $("#textarea").val('');
+    $("#review").show();
+  })
+  //On Click to Close the Modal on the X
+  $("#close").on("click", function () {
+
+    $(".wrap").hide();
+    $(".img").show();
+    $("#review").show();
+
+  })
+  
+  $(".img").on("click", function () {
+
+    $(".wrap").show();
+    $(".img").hide();
+    $("#review").hide();
+
+  })
+
+
+ function search() {
+
+$('#results').html('');
+$('#buttons').html('');
+
+//Get For input
+q = $('#query').val();
+
+//run Get Request on API
+
+$.get(
+  "https://www.googleapis.com/youtube/v3/search", {
+    part: 'snippet, id',
+    q: q,
+    type: 'video',
+    key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'
+  },
+
+  function (data) {
+    var nextPageToken = data.nextPageToken;
+    var prevPageToken = data.prevPageToken;
+
+
+    //loging the data
+    console.log(data);
+
+    $.each(data.items, function (i, item) {
+
+
+      //getting the output
+      var output = getOutput(item);
+
+      //Display Results
+
+      $('#results').append(output);
+
+
+
+
+    });
+
+
+  }
+);
+};
+
+
+function getOutput(item) {
+
+var videoId = item.id.videoId;
+var title = item.snippet.title;
+var description = item.snippet.description;
+var thumb = item.snippet.thumbnails.high.url;
+var channelTitle = item.snippet.ChannelTitle;
+var videoDate = item.snippet.publishedAt;
+var datePretty = moment(videoDate).format("MM/DD/YYYY")
+
+// appends to the html
+var output = '<li>' +
+  '<div class = "list-left">' +
+  '<img src="' + thumb + '">' +
+  '</div>' +
+  '<div class="list-right">' +
+  '<h3><a class = "iframe" href="http://www.youtube.com/watch/' + videoId + '"target="_blank">' + title + '</a></h3>' +
+  '<small>' + datePretty + '</small>' +
+  '<p>' + description + '</p>' +
+  '</div>' +
+  '</li>' +
+  '';
+
+
+
+
+
+return output;
+
+
+
+
+
+
+}
+
+  
+  </script>
+</body>
+</html>

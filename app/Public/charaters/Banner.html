@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Iron Man</title>
+    <title>Hulk</title>
     <style>
+
+         #test:hover{
+            opacity: 1;
+        }
         #test{
             
-    opacity: .70;
-    background-color: black;  
+    opacity: .80;
+    background-color: gray;  
     border: 2px solid black;
     border-style: solid;
     padding: 2%;
@@ -22,11 +26,10 @@
 
         .test2{
             width: 100%;
-            height:50px;
-            background-color: brown;
+            height:90px;
+            background-color: rgb(52, 83, 6);
         }
         .test3{
-            /* opacity:solid; */
             width: 100%;
             height: 700px;
             background-color: white;
@@ -35,7 +38,7 @@
             color: black;
         }
         body{
-           background-image: url("https://i1.wp.com/www.moviesobsession.com/wp-content/uploads/2019/02/IMG_20190225_092201.jpg?fit=1280%2C541&ssl=1"); 
+           background-image: url("https://thumbs.gfycat.com/TemptingPlayfulKitty-size_restricted.gif"); 
            background-size:cover;
            background-attachment: fixed;
         }
@@ -43,24 +46,40 @@
         border-bottom:100%;
         border-color: black;
         mask-border-width: 100%;
+        text-align: center;
+        position: relative;
+        top:20% !important; 
 
         }
+
+        #banner-image{
+         height:170px;
+         mask-position: 100%;
+            
+        }
+
+        
     </style>
 </head>
 <body>
+    <div class="background">
 <div class="container-fluid" id="test">
 <div class="test2">
     <h1>Bruce Banner</h1> 
 </div>  
     <div class = row>
-     <div class= "col-md-3">
-            <img src="https://static.tvtropes.org/pmwiki/pub/images/ironman_endgame.png" width="40px" length="40px" class="card-img" alt="...">
+        <div class= "col-md-3">
+                <br>
+            <img src="https://xxxskirt.xyz/wp-content/uploads/2019/07/intro-1563724357.jpg" width="40px"  class="card-img" alt="..." id="banner-image">
       <div class = "test3">
           
 
       </div>      
      </div>
      <div class= "col-md-9">
+            <br>
+           
+                
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt quam tempore voluptatem illum, possimus labore vero dicta fugiat alias odit quaerat incidunt sequi repudiandae distinctio! Eum sit consectetur dolores?
                     Asperiores magni odit minus illum vero quod sunt iusto aliquid, amet voluptates nesciunt iste dolore maiores eaque quis necessitatibus nam corporis, deserunt laborum illo fuga veritatis qui non. Sit, ipsa.
                     Amet maxime dicta modi cumque officia recusandae animi beatae, architecto assumenda ducimus sit omnis iure in necessitatibus voluptas ipsum libero enim quaerat! Eius dolor deleniti totam officiis, consectetur eos harum.
@@ -96,7 +115,7 @@
                     
             </div>
             <div class= "col-md-3">
-                    <img src="https://i.pinimg.com/originals/f8/89/32/f889323d87ae92dbd5da3b1193708dc3.gif" width="40px" length="40px" class="card-img" alt="...">  
+                    <img src="https://thumbs.gfycat.com/BogusHarshCreature-size_restricted.gif" width="40px" height="120px" class="card-img" alt="...">  
                     <div class = "test3">
           <p>Link1</p>
           <p>Link2</p>
@@ -137,12 +156,34 @@
             </div>
         <!-- </div> -->
     </div> 
- </div>  
+</div>
+</div>
+
+
+ 
 
 
 
 
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Script -->
+<script src="../Public/js/app.js"></script>
 
+<script>
+$(document).ready(function(){
+
+
+timeOut();
+
+function timeOut () {
+ $("#test").hide();
+ setTimeout(function(){ $("body").css("background-image","url(https://wallpapercave.com/wp/nz6FJ0q.jpg)"); }, 3000);
+ setTimeout(function(){ $("#test").fadeIn(); }, 3000);
+};
+});
+
+</script>
 
 
 
