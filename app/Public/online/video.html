@@ -1,115 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Marvel Online</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="../styles/movies.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>MCU Videos</title>
+  </head>
+  <style>
+    body {
+      /* background-image: url("https://i.ytimg.com/vi/KL6jwnIln6w/maxresdefault.jpg");
+      background-size: cover; */
+      background-color: #111;
+    }
 
-    <style>
-    
+     #test {
+      opacity: 0.99;
+      background-color:silver;
+      border: 2px solid rgb(26, 24, 24);
+      border-style: solid;
+      padding: 2%;
+      height: auto;
+      color: white;
+      width: 70%;
+    } 
 
-    
-    </style>
-</head>
-<body>
-    <div class="row">
+    h1 {
+      text-align: center;
+      color: rgb(173, 58, 58);
+      
+    }
 
-        <div class="col-lg-4 order-lg-1 order-3">
-  
-          <div class="table card" id="events-table"  style="top: 20px; display: block; width: 33%; position: fixed">
-        
-  
-          </div>
-  
-        </div>
-  
-        <div class="col-lg-5 order-lg-2 order-sm-1 order-1" id = "main-search">
-  
-              <div id="col-cent">
-  
-                <h1><span>Jam Search</span></h1>
-                <p class="intro">Search music from all of your favorite bands</p>
-                <p class="intro">Enter your favorite artist to search</p>
-                
-            <section>
-              <form id="search-form" name="search-form">
-                <div class="input-group mb-3">
-                  <input type="search" id="query" class=" form-control" placeholder="search your favorite bands...">
-                  <div class="input-group-append">
-                    <input id="select-artist" class="btn" type="submit" value="">
-                  </div>
-                </div>
-                <div class="icons">
-                  <a href="https://www.facebook.com/pg/JamSearch912/photos/?tab=album&album_id=285797105665764"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40">
-                  </a>
-                  <a id="bit"> <img alt="Bands in town" src="assets/images/bit.png" width="40" height="40">
-                  </a>
-                  <a href="https://www.youtube.com"> <img alt="youtube" src="assets/images/tube.png" width="40" height="40">
-                  </a>
-                </div>
-                <p class = "welcome" id = "welcome-message"></p>
-              </div>
-            </form>
-  
-  
-            <ul id="results"></ul>
-            <div id="buttons"></div>
-          </section>
-        </div>
-        <div class="col-lg-3 order-lg-3 order-sm-2 order-2">
-  
-          <div id="artist-div" style="position: fixed"></div>
-        </div>
-  
-  
+    .nav {
+      background-color: rgb(57, 57, 221) !important;
+      color: white;
+    }
+
+    .nav-link {
+      color: aliceblue;
+    }
+
+    .header {
+      background-color: #f1f1f1;
+      padding: 30px;
+      text-align: center;
+    }
+
+    #navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    #navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #navbar a.active {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .content {
+      padding: 16px;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .sticky + .content {
+      padding-top: 60px;
+    }
+
+    .header {
+      width: 100%;
+      height: 50vh;
+      background-image: url("https://4.bp.blogspot.com/-cp5gClWh1Fg/XFweqmnKRKI/AAAAAAAAZyc/fDWo8RbiXjANfHAJObmKp9V5WbPVq4BUwCEwYBhgL/s640/Screenshot_YouTube_20190207-172548.png");
+      background-size: cover;
+      background-position: 20px;
+      position: relative;
+    }
+
+    .background-imgs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* background-color: #4CAF50; */
+      display: flex;
+    }
+
+    .child1,
+    .child2 {
+      flex: 1;
+      margin-left: -100px;
+      background-size: cover;
+    }
+    .child1 {
+      background-image: url("https://www.itsnicethat.com/system/files/082017/59a68a737fa44c9e4d005b79/index_default/youtube_logo_redesign_graphic_design_digital_itsnicethat4.gif?1504087327");
+      /* background-color: #4CAF50; */
+      /* flex:1; */
+      transform: skewX(-20deg);
+      /* margin-left: -100px; */
+      /* background-size: cover; */
+      background-position-y: -50px;
+    }
+
+    .child2 {
+      background-image: url("https://vignette.wikia.nocookie.net/logopedia/images/d/d1/Marvel_Entertainment_Logo_%282002%29.jpg/revision/latest?cb=20190325210454");
+      /* flex:1; */
+      /* margin-left: -100px; */
+      /* background-size: cover; */
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 9999;
+      top: 0%;
+      left: 0%;
+      background-color: #111;
+      background-image: url(https://images.unsplash.com/photo-1505489435671-80a165c60816?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+      background-position: 20px;
+      background-size: 100%;
+      background-attachment: fixed;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align: left;
+    }
+
+    #menu {
+      position: absolute;
+      top: 5%;
+      left: 2%;
+      color: black;
+      display: inline-block;
+      z-index: 9999;
+    }
+
+    #nav-color {
+      background-color: #333 !important;
+    }
+
+    .row-center {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      position: relative;
+      left: 2%;
+    }
+      
+      
+
+    a {
+      color: navy;
+      margin-left: 2%;
+    }
+
+    /* .videosection{
+      display: flex;
+     
+      padding: 100px;
+      justify-content:center;
+      align-items: center;
+    }
+    .col-md-41{
+      flex:1; 
+       margin: 30px;
+      
+    } */
+
+    .col-md-4{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+    }
+
+    #search-btn:hover{
+      color: #ddd !important;
+    }
+
+    #search-btn{
+      background: brown !important;
+      color: blue !important;
+      border: #111 !important;
+      text-align: center !important;
+     
+    }
+
+
+    /* button:hover{
+      color: #ddd !important;
+    }
+
+    button{
+      background: brown !important;
+      color: blue !important;
+      border: #111 !important;
+    } */
+
+
+    /* start of youtube container css */
+    #container{
+        width:740px;
+        background:#fff;
+        margin:auto;
+    }
+
+    .clearfix{
+        clear:both;
+    }
+
+    /* search bar css */
+    #search-form{
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    /* .fieldcontainer{
+        display: block;
+        position: relative;
+        width: 90px;
+        margin: 0 auto;
+    } */
+
+
+    #search-field{
+        box-sizing: border-box;
+        display: block;
+        width: 45%;
+        padding: 11px 7px;
+        padding-right: 43px;
+        background: #fff;
+        color: #ccc;
+        border: 1px solid #c8c8cc;
+        font-size: 1.6em;
+        border-bottom-color: #d2e2d7;
+        border-radius: 1px;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
+    }
+       
+
+    #results li{
+        padding:10px 0;
+        border-bottom: 1px black dotted;
+        list-style: none;
+        overflow: auto;
+        color:white;
+    }
+
+    .list-left{
+        float:left;
+        width: 20%;
+    }
+
+.list-left img{
+    width: 100%;
+    padding:3px;
+    border: 3px;
+    border: solid #ccc 1px;
+
+}
+
+.list-right{
+    float:right;
+    width:78%;
+}
+
+.cTitle{
+color: #dd2826;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: blue;
+}
+
+
+
+
+  </style>
+
+  <body>
+    <div class="header">
+      <div class="background-imgs">
+        <div class="child1"></div>
+        <div class="child2"></div>
       </div>
-  
-  
+      <div style="font-size:30px;cursor:pointer" id="menu" onclick="openNav()">
+        &#9776;
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="../index.html"
+          ><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLd5gvV5XowKolcsdvo1vNorEMkOndqjcE2jp_hJ5JZDgNu60a"
+            alt="Girl in a jacket"
+            style="width:20px;height:20px;"
+          />Home</a
+        >
+        <a href="#"
+          ><img
+            src="https://i.pinimg.com/originals/02/8f/07/028f0724e4520d93f7f45272b8ef3076.jpg"
+            alt="Girl in a jacket"
+            style="width:20px;height:20px;"
+          />Character Page</a
+        >
+        <a href="#"
+          ><img
+            src="https://icons-for-free.com/iconfiles/png/512/bow+and+arrow+hawkeye+marvel+icon-1320085978912614688.png"
+            alt="Girl in a jacket"
+            style="width:20px;height:20px;"
+          />
+          Comic's Page</a
+        >
+        <a href="../movies/movies.html"
+          ><img
+            src="https://cdn.iconscout.com/icon/free/png-256/the-punisher-marvel-super-hero-earth-saver-avenger-28703.png"
+            alt="Girl in a jacket"
+            style="width:20px;height:20px;"
+          />Movie Page</a
+        >
+        <!-- <a href="#"><img src="https://seeklogo.com/images/M/marvel-comics-logo-31D9B4C7FB-seeklogo.com.png" alt="Girl in a jacket" style="width:20px;height:20px;"> online media</a> -->
+        <a href="#"
+          ><img
+            src="https://i.pinimg.com/originals/02/8f/07/028f0724e4520d93f7f45272b8ef3076.jpg"
+            alt="Girl in a jacket"
+            style="width:20px;height:20px;"
+          />
+          Blog</a
+        >
+        <a href="#"
+          ><img
+            src="http://icons.iconarchive.com/icons/fasticon/shop-cart/512/shop-cart-icon.png"
+            alt="Girl in a jacket"
+            style="width:20px;height:20px;"
+          />
+          M-Shop</a
+        >
+      </div>
     </div>
-  
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Script -->
-  <!-- <script src="../Public/js/app.js"></script> -->
 
-  <script>
-      $(document).ready(function () {
-  //default state
-  $("#youtube-result").hide();
-  $("#artist-review").hide();
-  $(".wrap").hide();
-  //On Click for Modal to Hide on Submit Click
-  $("#submit").on("click", function () {
+    <nav
+      class="navbar navbar-light bg-light justify-content-between"
+      id="nav-color"
+    >
+      <a class="navbar-brand">Navbar</a>
+      <form id="search-form" name="search-form" onsubmit="return search()">
+        <div class="fieldcontainer">
+            <input type="search" id="query" class="search-field" placeholder= "search youtube...">
+            <button input type="submit" class="btn btn-outline-success my-2 my-sm-0" name="search-btn" id="search-btn" value="">Enter</button>
+        </div>
+      <!-- <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button> -->
+      </form>
+    </nav>
 
-    $(".wrap").hide();
-    $(".img").show();
-    $("#textarea").val('');
-    $("#review").show();
-  })
-  //On Click to Close the Modal on the X
-  $("#close").on("click", function () {
+ <!--this is the video div-->
+ <ul id="results"></ul>
+ <!--this is the next buttons-->
+ <div id="buttons"></div>
 
-    $(".wrap").hide();
-    $(".img").show();
-    $("#review").show();
+ <br>
+ <br>
+ <br>
+ <br>
+ 
 
-  })
-  
-  $(".img").on("click", function () {
+    <div class="container-fluid" id="test">
+      <h1><u>Pitch Meeting:</u></h1>
+      <br>
+      
+      <div class="row row-center videosection">
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/3PfsJansRIA"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/r2BfC8VfsZw"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/t1OZMJtxHl0"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+      </div>
+      <a
+        href="https://www.youtube.com/playlist?list=PL--PgETgAz5FGoatB9KQzbnpv0bgZqU2l"
+        >Click for more content and subscribe</a
+      >
+      <br />
+      <br />
+      <br />
+      <h1><u>How it Should have ended:</u></h1>
+      <br>
+      
+      <div class="row row-center">
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/4vjs_0CoRs4"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/YnZ_-5I72ec"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/GBxxjhnjH4Y"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <a href="https://www.youtube.com/channel/UCHCph-_jLba_9atyCZJPLQQ"
+          >Click for more content and subscribe</a>
+        
+      </div>
+      <br />
+      <br />
+      <br />
+      <h1><u>Hack Smith:</u></h1>
+      <br>
+      
+      <div class="row row-center">
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/_-hSMsNtlic"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/pxf7YkF0iN0"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <div class="col-md-4">
+          <iframe
+            id="video"
+            width="200px"
+            height="200px"
+            src="https://www.youtube.com/embed/CvxI6Lu8lOM"
+            allowfullscreen
+            alt=""
+          >
+          </iframe>
+        </div>
+        <a href="https://www.youtube.com/results?search_query=hacksmith"
+          >Click for more content and subscribe</a
+        >
+      </div>
+    </div>
 
-    $(".wrap").show();
-    $(".img").hide();
-    $("#review").hide();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/app.js"></script>
 
-  })
+    <script>
+     $('#search-form').submit(function(e){
+        e.preventDefault();
+})
 
 
- function search() {
+    function search() {
 
 $('#results').html('');
 $('#buttons').html('');
@@ -124,8 +580,7 @@ $.get(
     part: 'snippet, id',
     q: q,
     type: 'video',
-    key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'
-  },
+    key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'},
 
   function (data) {
     var nextPageToken = data.nextPageToken;
@@ -145,14 +600,14 @@ $.get(
 
       $('#results').append(output);
 
-
-
-
     });
 
 
-  }
-);
+    }
+
+  );
+
+
 };
 
 
@@ -164,7 +619,7 @@ var description = item.snippet.description;
 var thumb = item.snippet.thumbnails.high.url;
 var channelTitle = item.snippet.ChannelTitle;
 var videoDate = item.snippet.publishedAt;
-var datePretty = moment(videoDate).format("MM/DD/YYYY")
+// var datePretty = moment(videoDate).format("MM/DD/YYYY")
 
 // appends to the html
 var output = '<li>' +
@@ -173,26 +628,17 @@ var output = '<li>' +
   '</div>' +
   '<div class="list-right">' +
   '<h3><a class = "iframe" href="http://www.youtube.com/watch/' + videoId + '"target="_blank">' + title + '</a></h3>' +
-  '<small>' + datePretty + '</small>' +
+//   '<small>' + datePretty + '</small>' +
+   '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>'+
   '<p>' + description + '</p>' +
   '</div>' +
   '</li>' +
+  '<div class="clearfix"></div>' +
   '';
 
-
-
-
-
-return output;
-
-
-
-
-
-
-}
-
+  return output;
   
-  </script>
-</body>
+}
+    </script>
+  </body>
 </html>

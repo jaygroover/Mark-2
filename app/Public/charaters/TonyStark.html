@@ -5,14 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Iron Man</title>
-    <iframe width="0" height = "0" src="demo.mp3" loop= "true" frameborder="0" allowfullscreen></iframe>
+    <!-- <iframe width="0" height = "0" src="demo.mp3" loop= "true" frameborder="0" allowfullscreen></iframe> -->
     <style>
 
+.header {
+      width: 100%;
+      height: 50vh;
+      /* background-color: green; */
+      background-image: url("https://4.bp.blogspot.com/-cp5gClWh1Fg/XFweqmnKRKI/AAAAAAAAZyc/fDWo8RbiXjANfHAJObmKp9V5WbPVq4BUwCEwYBhgL/s640/Screenshot_YouTube_20190207-172548.png");
+      background-size: cover;
+      background-position: 20px;
+      position: relative;
+    }
+
+    .background-imgs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* background-color: #4CAF50; */
+      display: flex;
+    }
+
+    .child1,
+    .child2 {
+      flex: 1;
+      margin-left: -100px;
+      background-size: cover;
+    }
+    .child1 {
+      background-image: url("https://vignette.wikia.nocookie.net/logopedia/images/d/d1/Marvel_Entertainment_Logo_%282002%29.jpg/revision/latest?cb=20190325210454");
+      /* background-color: #4CAF50; */
+      /* flex:1; */
+      transform: skewX(-20deg);
+      /* margin-left: -100px; */
+      /* background-size: cover; */
+      background-position-y: -60px;
+      background-position-x: 42px;
+    }
+
+    .child2 {
+      background-image: url("https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/e/e5/IronMan_Title.png/revision/latest?cb=20141029182029");
+      background-position-x: 32px;
+      /* flex:1; */
+      /* margin-left: -100px; */
+      /* background-size: cover; */
+    }
+
 #test:hover{
-            opacity: 1;
+opacity: 1;
         }
-        #test{
+#test{
             
     opacity: .88;
     background-color: black;  
@@ -21,7 +69,8 @@
     padding: 2%;
     height: auto;
     color:white;
-    width: 50%; 
+    width: 80%; 
+    opacity: 1;
         }
 
         .test2{
@@ -29,19 +78,24 @@
             height:50px;
             background-color: brown;
         }
-        .test3{
+        .test3 {
             /* opacity:solid; */
-            width: 100%;
-            height: 700px;
-            background-color: white;
+            width: 100% !important;
+            /* height: 700px; */
+            background-color:silver;
             border: solid;
             border-color: black;
             color: black;
+            height: auto;
         }
+        
         body{
-           background-image: url("https://i.makeagif.com/media/8-11-2015/VzgqRv.gif"); 
+           background-image: url("iron man arms.gif"); 
+           /* background-image: url("https://images5.alphacoders.com/403/thumb-1920-403880.jpg"); */
+           background-color: black;
            background-size:cover;
            background-attachment: fixed;
+           opacity: 1px;
         }
         h1{
         border-bottom:100%;
@@ -50,99 +104,318 @@
         mask-border-width: 100%;
 
         }
+
+    .comic1{
+    width: 100% !important;
+    height: 400px !important;
+        }
+
+    .subheader{
+    width: 100% !important;
+    height: 5vh;
+    background-color:rgb(12, 100, 134);
+    color:white;
+    text-align: center;
+    padding: 5px 5px;
+    }
+
+    .subheader2 p{
+    width: 100%;
+    color:black;
+    text-align: center;
+    border-bottom:solid;
+    border-color: black;
+    border-width: 100%;
+    }
+    
+    .subheader3 p{
+    width: 100%;
+    color:brown;
+    text-align:center;
+    text-align: left;
+    }
+
+    .subheader3{
+    border-bottom:solid;
+    border-color: black;
+    border-width: 100%;  
+    }
+
+    
+    .subheader4 p{
+    width: 100%;
+    color:black;
+    text-align: left;
+    border-bottom:solid;
+    border-color: black;
+    border-width: 100%;
+    }
+
+
     </style>
 </head>
 <body>
-<div class="container-fluid" id="test">
-<div class="test2">
-    <h1>Tony Stark</h1> 
+<div class="header">
+<div class="background-imgs">
+    <div class="child1"></div>
+        <div class="child2"></div>
+        </div>
 </div>  
+
+
+<div class="container-fluid" id="test">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <img src="https://cdn3.movieweb.com/i/article/oQu2rjvowd9zUG653WUVzG47lsmJ69/798:50/We-Love-You-3000-Tour-Avengers-Endgame-Plans.jpg  " class="comic1" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/mcu-1-iron-man.jpg?itok=3BqCURHK" class="comic1" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="http://www.ubuntu-ast.org/largeimages/m/71/719666_iron-man-wallpaper-1920x1080.jpg" class="comic1" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+<br>
+<br>
     <div class = row>
      <div class= "col-md-3">
             <img src="https://static.tvtropes.org/pmwiki/pub/images/ironman_endgame.png" width="40px" length="40px" class="card-img" alt="...">
       <div class = "test3">
+          <div class="subheader">
+            <h5>Chararter infomation:</h5>
+          </div>
+          <div class="subheader2">
+        <p>Portrayed:    Robert Downey Jr.</p>
+    </div>
+    <div class="subheader3">
+        <h5>Appeared in:</h5>
+        <a href="../movies/ironMan.html"><p>Iron Man</p></a>
+        <a href="../movies/hulk.html"><p>The Incredible Hulk</p></a>
+        <a href="../movies/ironMan2.html"><p>Iron Man 2</p></a>
+        <a href="../movies/avengers.html"><p>The Avengers</p></a>
+        <a href="../movies/ironMan3.html"><p>Iron Man 3</p></a>
+        <a href="../movies/avengers2.html"><p>Avengers: age of Ultron</p></a>
+        <a href="../movies/captainAmerica3.html"><p>Captain America: Civil War</p></a>
+        <a href="../movies/spiderMan.html"><p>Spider-Man: Homecoming</p></a>
+        <a href="../movies/avengers3.html"><p>Avengers: Infinity War</p></a>
+        <a href="../movies/avengers4.html"><p>Avengers: Endgame</p></a>
+    </div>
+    <div class="subheader">
+      <h5>Chararter Bio:</h5>
+    </div>
+    <div class="subheader2">
+      <p>Real Name:   Anthony Edward Stark</p>
+  </div>
+  <!-- <div class="subheader3">
+    <h5>Occupations:</h5>
+    <p>Stark Industries</p>
+    <p>The Avengers</p>
+    <p>Weapons Manufacture</p>
+    
+</div> -->
+<div class="subheader4">
+  <p>Status:  Deceased</p>
+</div>
+<div class="subheader4">
+  <p>age:  50's</p>
+</div>
+<div class="subheader4">
+  <p>Gender:  Male</p>
+</div>
+<div class="subheader4">
+  <p>Race:  Human</p>
+</div>
+<div class="subheader4">
+  <p>Spouse:  Pepper Potts</p>
+</div>
+<div class="subheader4">
+    <p>Child: Morgan Stark</p>
+  </div>
+  <div class="subheader4">
+      <p>Nationality:   American</p>
+    </div>
+    
+
           
 
       </div>      
      </div>
      <div class= "col-md-9">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt quam tempore voluptatem illum, possimus labore vero dicta fugiat alias odit quaerat incidunt sequi repudiandae distinctio! Eum sit consectetur dolores?
-                    Asperiores magni odit minus illum vero quod sunt iusto aliquid, amet voluptates nesciunt iste dolore maiores eaque quis necessitatibus nam corporis, deserunt laborum illo fuga veritatis qui non. Sit, ipsa.
-                    Amet maxime dicta modi cumque officia recusandae animi beatae, architecto assumenda ducimus sit omnis iure in necessitatibus voluptas ipsum libero enim quaerat! Eius dolor deleniti totam officiis, consectetur eos harum.
-                    Labore non inventore voluptatum, asperiores, in delectus nesciunt veritatis animi quibusdam similique architecto atque sequi. Adipisci doloribus natus consequuntur, at facilis non sint, beatae sed, optio earum dolore assumenda nihil.
-                    Omnis assumenda consequatur cum necessitatibus quasi eaque provident tempore modi, architecto, sequi iure commodi vero perferendis, repellat officiis quisquam autem accusamus eligendi? Expedita amet placeat fugiat quo accusantium ullam similique.
-                    Error sit, nobis quod quis doloremque corrupti voluptas perspiciatis corporis omnis exercitationem ullam quasi aut architecto temporibus excepturi eveniet vitae commodi consequuntur distinctio minima, consequatur eligendi. Eaque voluptas totam minima.
-                    Nemo maxime, minus quas quos harum dolore maiores, explicabo doloribus aperiam consectetur amet! Nulla dolore facere, praesentium deserunt ex magnam excepturi commodi esse expedita, officia, ipsum ab facilis minima. Error!
-                    Facere commodi, non qui ea, iusto maiores suscipit asperiores alias consequatur aut est animi labore recusandae vero sed error aspernatur aperiam totam deserunt sapiente voluptates. Quos voluptatibus error nisi. Sint!
-                    Vel ex, quod distinctio doloremque corporis recusandae deserunt iure et libero ipsa, atque tempore eligendi laboriosam ab debitis obcaecati pariatur, aliquid natus accusamus tenetur? Aperiam expedita modi ipsa doloremque voluptates!
-                    Exercitationem, in cupiditate consequuntur omnis corporis nobis dolore veniam beatae inventore aliquam sapiente debitis provident repudiandae nostrum doloremque qui voluptatum numquam aspernatur atque ab. A hic expedita recusandae explicabo vero!
-                    Amet quisquam earum at deserunt! Quis reprehenderit, asperiores, expedita atque odit voluptatem eaque error quas magni rem obcaecati vero? Tempora laboriosam accusantium quod minima dolore praesentium reiciendis ab eum obcaecati?
-                    Soluta nesciunt ab fugit dolores perferendis quibusdam, debitis in quis. Laudantium tenetur repellat, soluta non harum facere eaque sit accusamus maxime ducimus perferendis, doloribus nostrum labore incidunt, dolorem eos quia.
-                    Amet officia, vel tenetur quod dolorum officiis? Corporis earum vero magni suscipit, quia labore maxime vel dolore eos aut vitae enim voluptatum asperiores cum repellat eveniet dignissimos commodi deserunt facilis.
-                    Dicta consequatur pariatur sapiente vero facere enim harum veniam expedita, impedit sit voluptas dignissimos suscipit hic recusandae perferendis eligendi reiciendis non accusamus unde sunt aliquid explicabo, nulla autem! Pariatur, voluptatem?</p>
-                    
+       <h4>Early Life:</h4>
+            <p>In the continuity of the Marvel Cinematic Universe, Anthony Edward "Tony" Stark was born to Howard and Maria Stark on May 29, 1970.
+              His childhood was characterized by a cold and affectionless relationship with his father, who was already famous as an inventor and businessman. He was also a child prodigy, graduating from MIT, summa cum laude, at age 17. Stark's parents died in a car accident (later revealed to be an assassination by a brainwashed Bucky Barnes)
+              on December 16, 1991, and Stark inherited his father's company, becoming CEO of Stark Industries. Over the years, he became well-known as a weapons designer and inventor, and lived a playboy lifestyle. In 1999, he attended a conference in Bern where he met scientists Maya Hansen, inventor of the Extremis experimental regenerative treatment,
+              and Aldrich Killian, rejecting an offer to work for Killian's Advanced Idea Mechanics.</p>
+
+            <h4>Origin of Iron Man:</h4>
+            <p>In 2009, Stark travels to war-torn Afghanistan with his friend and military liaison Lieutenant Colonel James Rhodes to demonstrate Stark's new "Jericho" missile. After the demonstration, the convoy is ambushed and Stark is critically wounded and imprisoned by a terrorist group, the Ten Rings. Fellow captive Yinsen, a doctor, implants an electromagnet into Stark's chest to keep shrapnel shards from reaching his heart and killing him. Ten Rings leader Raza offers Stark freedom in exchange for building a Jericho missile, but Tony and Yinsen agree Raza will not keep his word. Stark and Yinsen secretly build a small, powerful electric generator called an arc reactor to power Stark's electromagnet and a suit of powered armor. When the Ten Rings attack the workshop. Yinsen sacrifices himself to divert them while the suit is completed. The armored Stark battles his way out of the cave to find the dying Yinsen, then burns the Ten Rings' weapons in anger and flies away, crashing in the desert. Rescued by Rhodes, Stark returns home to announce that his company will no longer manufacture weapons. Obadiah Stane, his father's old partner and the company's manager, advises Stark that this may ruin Stark Industries and his father's legacy. With the aid of his computer J.A.R.V.I.S., Stark secretly builds a sleeker version of his improvised armor suit with a more powerful arc reactor.
+
+                At a Stark Industries charity event, reporter Christine Everhart informs Stark that his company's weapons were being used by the Ten Rings to attack Yinsen's home village, Gulmira. Stark learns that Stane has been arms trafficking to criminals worldwide, and is staging a coup to replace him as Stark Industries' CEO. Stark, in his new armor, flies to Afghanistan and saves the villagers. Flying home, Stark is shot at by two F-22 Raptor fighter jets, forcing him to call Rhodes and reveal his secret identity. Stane acquires the wreckage of Stark's prototype from the Ten Rings, and has a massive new suit reverse engineered. Stane's scientists cannot duplicate Stark's miniaturized arc reactor, so Stane ambushes Stark at his home and takes the one from his chest, revealing that Stane was responsible for Stark's captivity. Stark manages to get to his original reactor to replace it, and defeats Stane. The next day, at a press conference, Stark defies suggestions from S.H.I.E.L.D. and publicly admits to being the superhero the press has dubbed "Iron Man". Later, S.H.I.E.L.D. Director Nick Fury then visits Stark at home, telling him that Iron Man is not "the only superhero in the world", and explaining that he wants to discuss the "Avenger Initiative".
+                
+                In Russia, Ivan Vanko sees media coverage of Stark's disclosure of his identity as Iron Man, and begins building his own miniature arc reactor. Six months later,[N 2] Stark has become a superstar and uses his Iron Man suit for peaceful means, resisting government pressure to sell his designs. He reinstitutes the Stark Expo to continue his father's legacy, but discovers that the palladium core in the arc reactor that keeps Stark alive and powers the armor is slowly poisoning him. Growing increasingly reckless and despondent about his impending death, Stark appoints Pepper Potts CEO of Stark Industries, and hires Stark employee Natalie Rushman to replace her as his personal assistant. Stark competes in the Monaco Historic Grand Prix, and is attacked mid-race by Vanko, who wields electrified whips. Stark dons his Mark V armor and defeats Vanko, but the suit is severely damaged. Vanko explains his intent to prove that Iron Man is not invincible. Stark's rival, Justin Hammer, fakes Vanko's death while breaking him out of prison and asks him to build armored suits to upstage Stark. At his birthday party, Stark gets drunk while wearing the Mark IV suit. Rhodes dons Stark's Mark II prototype armor and tries to restrain him. The fight ends in a stalemate, so Rhodes confiscates the Mark II for the U.S. Air Force.
+                
+                Nick Fury reveals that "Rushman" is Agent Natasha Romanoff, that Howard Stark was a S.H.I.E.L.D. founder whom Fury knew personally, and that Vanko's father Anton jointly invented the arc reactor with Howard Stark, but tried to sell it for profit. Howard Stark had Anton deported, and the Soviets sent him to the gulag. Stark discovers a hidden message in the diorama of the 1974 Stark Expo, a diagram of the structure of a new element, which Stark synthesizes. When he learns Vanko is still alive, he places the new element in his arc reactor. At the Expo, Hammer unveils Vanko's armored drones, led by Rhodes in a heavily weaponized version of the Mark II armor. Stark arrives in the Mark VI armor to warn Rhodes, but Vanko remotely takes control of both the drones and Rhodes' armor and attacks Iron Man. After Romanoff is able to return control of the Mark II armor to Rhodes, Stark and Rhodes together defeat Vanko and his drones. At a debriefing, Fury informs Stark that because of Stark's difficult personality, S.H.I.E.L.D. intends to use him only as a consultant. Stark and Rhodes receive medals for their heroism. Stark's involvement in the Avengers initiative is evidenced by his approaching General Thaddeus Ross in a bar shortly after Ross's latest failure to capture the Hulk, informing Ross that a team is being put together.</p>
+
+
+               <!-- <h4>Formation of the Avengers</h4> 
+               <p>Several months later, in response to an attack by the Asgardian Loki, S.H.I.E.L.D.
+                  Agent Phil Coulson visits Stark to have him review the research of Erik Selvig on the Tesseract. In Stuttgart, Stark, along with Captain America (Steve Rogers) and Romanoff, confront Loki, who surrenders. Thor arrives and frees Loki, but after a confrontation with Stark and Rogers, agrees to take Loki to S.H.I.E.L.D.'s flying aircraft carrier, the Helicarrier. The Avengers become divided over how to approach Loki and the revelation that S.H.I.E.L.D. plans to harness the Tesseract to develop weapons. Agents possessed by Loki attack the Helicarrier, and Loki escapes. Stark and Rogers realize that Loki needs to overpower them publicly to validate himself as ruler of Earth. Loki uses the Tesseract to open a wormhole above Stark Tower in New York City. A Chitauri fleet in space invades through the wormhole, and Stark and the others rally in defense of the city. Fury's superiors from the World Security Council attempt to end the invasion by launching a nuclear missile at Midtown Manhattan. Stark intercepts the missile, and in an apparent sacrifice of his own life, takes it through the wormhole toward the Chitauri fleet. The missile detonates, destroying the Chitauri mothership and disabling their forces on Earth. Stark's suit runs out of power, 
+                 and he falls back through the wormhole but the Hulk saves him from crashing into the ground.</p>     -->
         </div>
     </div>
-    <div class = row>
-            <div class= "col-md-9">
-                   <p>Tempore, animi. Eum at, voluptas rerum sit consequuntur voluptatem necessitatibus corrupti eligendi pariatur molestias? At, labore quasi! Ullam ex laudantium similique dolore cum officia, excepturi, dolor culpa laborum est nisi.
-                    Temporibus quae voluptate vero modi quod et commodi, ex repellendus eum earum! Optio laudantium alias accusantium nulla sapiente? In quam quos quisquam architecto ipsam similique impedit cupiditate reprehenderit, labore ratione.
-                    Esse, delectus quasi voluptatibus sequi veniam quis explicabo numquam incidunt laudantium obcaecati praesentium possimus dolore vero maxime inventore nulla illo, soluta vitae repellat, autem illum nam fugiat nemo ea. Iste.
-                    Facilis doloremque, at reprehenderit aspernatur animi rem maiores sunt! Laudantium libero architecto deleniti repellat impedit. Earum necessitatibus, eaque repudiandae distinctio eligendi nobis libero mollitia sed aliquid. Consequuntur dolorem ad suscipit!
-                    Magni neque dolore eum odit officia, inventore temporibus doloremque sint ipsum? Nihil quidem ad praesentium, hic provident quaerat aliquam eum, minima exercitationem, nam tempore mollitia delectus ipsam debitis et illum!
-                    Sed dolorem pariatur sunt ducimus saepe esse sit, eos, est quas veniam itaque delectus possimus iste asperiores, quaerat doloribus ex ullam omnis perferendis inventore adipisci. Iste neque culpa a voluptatibus!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt quam tempore voluptatem illum, possimus labore vero dicta fugiat alias odit quaerat incidunt sequi repudiandae distinctio! Eum sit consectetur dolores?
-                    Asperiores magni odit minus illum vero quod sunt iusto aliquid, amet voluptates nesciunt iste dolore maiores eaque quis necessitatibus nam corporis, deserunt laborum illo fuga veritatis qui non. Sit, ipsa.
-                    Amet maxime dicta modi cumque officia recusandae animi beatae, architecto assumenda ducimus sit omnis iure in necessitatibus voluptas ipsum libero enim quaerat! Eius dolor deleniti totam officiis, consectetur eos harum.
-                    Labore non inventore voluptatum, asperiores, in delectus nesciunt veritatis animi quibusdam similique architecto atque sequi. Adipisci doloribus natus consequuntur, at facilis non sint, beatae sed, optio earum dolore assumenda nihil.
-                    Omnis assumenda consequatur cum necessitatibus quasi eaque provident tempore modi, architecto, sequi iure commodi vero perferendis, repellat officiis quisquam autem accusamus eligendi? Expedita amet placeat fugiat quo accusantium ullam similique.
-                    Error sit, nobis quod quis doloremque corrupti voluptas perspiciatis corporis omnis exercitationem ullam quasi aut architecto temporibus excepturi eveniet vitae commodi consequuntur distinctio minima, consequatur eligendi. Eaque voluptas totam minima.
-                    Nemo maxime, minus quas quos harum dolore maiores, explicabo doloribus aperiam consectetur amet! Nulla dolore facere, praesentium deserunt ex magnam excepturi commodi esse expedita, officia, ipsum ab facilis minima. Error!</p>
-                    
-            </div>
-            <div class= "col-md-3">
-                    <img src="https://i.pinimg.com/originals/f8/89/32/f889323d87ae92dbd5da3b1193708dc3.gif" width="40px" length="40px" class="card-img" alt="...">  
-                    <div class = "test3">
-          <p>Link1</p>
-          <p>Link2</p>
-          <p>Link3</p>
-          <p>Link4</p>
-          <p>Link5</p>
-          <p>Link1</p>
-          <p>Link2</p>
-          <p>Link3</p>
-          <p>Link4</p>
-          <p>Link5</p>
-          <p>Link1</p>
-          <p>Link2</p>
-          <p>Link3</p>
-          <p>Link4</p>
-          <p>Link5</p>
-          <p>Link1</p>
-         
-                  
-        </div>                
+
+    <div class="row">
+      <div class="col-md-12">
+          <h4>Formation of the Avengers</h4> 
+          <p>Several months later, in response to an attack by the Asgardian Loki, S.H.I.E.L.D.
+             Agent Phil Coulson visits Stark to have him review the research of Erik Selvig on the Tesseract. In Stuttgart, Stark, along with Captain America (Steve Rogers) and Romanoff, confront Loki, who surrenders. Thor arrives and frees Loki, but after a confrontation with Stark and Rogers, agrees to take Loki to S.H.I.E.L.D.'s flying aircraft carrier, the Helicarrier. The Avengers become divided over how to approach Loki and the revelation that S.H.I.E.L.D. plans to harness the Tesseract to develop weapons. Agents possessed by Loki attack the Helicarrier, and Loki escapes. Stark and Rogers realize that Loki needs to overpower them publicly to validate himself as ruler of Earth. Loki uses the Tesseract to open a wormhole above Stark Tower in New York City. A Chitauri fleet in space invades through the wormhole, and Stark and the others rally in defense of the city. Fury's superiors from the World Security Council attempt to end the invasion by launching a nuclear missile at Midtown Manhattan. Stark intercepts the missile, and in an apparent sacrifice of his own life, takes it through the wormhole toward the Chitauri fleet. The missile detonates, destroying the Chitauri mothership and disabling their forces on Earth. Stark's suit runs out of power, 
+            and he falls back through the wormhole but the Hulk saves him from crashing into the ground.</p>    
+      </div>
     </div>
-            <div class="row">
-                <div class ="col-md-12">
-                        <p>Tempore, animi. Eum at, voluptas rerum sit consequuntur voluptatem necessitatibus corrupti eligendi pariatur molestias? At, labore quasi! Ullam ex laudantium similique dolore cum officia, excepturi, dolor culpa laborum est nisi.
-                                Temporibus quae voluptate vero modi quod et commodi, ex repellendus eum earum! Optio laudantium alias accusantium nulla sapiente? In quam quos quisquam architecto ipsam similique impedit cupiditate reprehenderit, labore ratione.
-                                Esse, delectus quasi voluptatibus sequi veniam quis explicabo numquam incidunt laudantium obcaecati praesentium possimus dolore vero maxime inventore nulla illo, soluta vitae repellat, autem illum nam fugiat nemo ea. Iste.
-                                Facilis doloremque, at reprehenderit aspernatur animi rem maiores sunt! Laudantium libero architecto deleniti repellat impedit. Earum necessitatibus, eaque repudiandae distinctio eligendi nobis libero mollitia sed aliquid. Consequuntur dolorem ad suscipit!
-                                Magni neque dolore eum odit officia, inventore temporibus doloremque sint ipsum? Nihil quidem ad praesentium, hic provident quaerat aliquam eum, minima exercitationem, nam tempore mollitia delectus ipsam debitis et illum!
-                                Sed dolorem pariatur sunt ducimus saepe esse sit, eos, est quas veniam itaque delectus possimus iste asperiores, quaerat doloribus ex ullam omnis perferendis inventore adipisci. Iste neque culpa a voluptatibus!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt quam tempore voluptatem illum, possimus labore vero dicta fugiat alias odit quaerat incidunt sequi repudiandae distinctio! Eum sit consectetur dolores?
-                                Asperiores magni odit minus illum vero quod sunt iusto aliquid, amet voluptates nesciunt iste dolore maiores eaque quis necessitatibus nam corporis, deserunt laborum illo fuga veritatis qui non. Sit, ipsa.
-                                Amet maxime dicta modi cumque officia recusandae animi beatae, architecto assumenda ducimus sit omnis iure in necessitatibus voluptas ipsum libero enim quaerat! Eius dolor deleniti totam officiis, consectetur eos harum.
-                                Labore non inventore voluptatum, asperiores, in delectus nesciunt veritatis animi quibusdam similique architecto atque sequi. Adipisci doloribus natus consequuntur, at facilis non sint, beatae sed, optio earum dolore assumenda nihil.
-                                Omnis assumenda consequatur cum necessitatibus quasi eaque provident tempore modi, architecto, sequi iure commodi vero perferendis, repellat officiis quisquam autem accusamus eligendi? Expedita amet placeat fugiat quo accusantium ullam similique.
-                                Error sit, nobis quod quis doloremque corrupti voluptas perspiciatis corporis omnis exercitationem ullam quasi aut architecto temporibus excepturi eveniet vitae commodi consequuntur distinctio minima, consequatur eligendi. Eaque voluptas totam minima.
-                                Nemo maxime, minus quas quos harum dolore maiores, explicabo doloribus aperiam consectetur amet! Nulla dolore facere, praesentium deserunt ex magnam excepturi commodi esse expedita, officia, ipsum ab facilis minima. Error!</p>       
+    <div class = row>
+        <div class= "col-md-9">
+          <h4>Aftermath of the Battle of New York:</h4>
+            <p>Following the battle, Adrian Toomes and his salvage company contract to clean up the city, but their operation is taken over by the Department of Damage Control (D.O.D.C.), 
+              a partnership between Stark and the U.S. government. An enraged Toomes persuades his employees to keep Chitauri technology they have already scavenged to create advanced weapons.[78] Stark develops PTSD from his experiences during the alien invasion, 
+              resulting in panic attacks. Restless, he builds several dozen Iron Man suits, creating friction with girlfriend Pepper Potts. When Happy Hogan is badly injured in one of a string of bombings by a terrorist known only as the Mandarin, Stark issues a televised threat to the Mandarin, who destroys Stark's home with helicopter gunships. Maya Hansen,
+              who came to warn Stark, survives the attack along with Potts. Stark escapes in an Iron Man suit, which J.A.R.V.I.S. pilots to rural Tennessee, following a flight plan from Stark's investigation into the Mandarin. Stark's experimental armor lacks sufficient power to return to California, and the world believes him dead.</p>
+            <p>Stark investigates the remains of a local explosion bearing the hallmarks of a Mandarin attack. He discovers the "bombings" were triggered by soldiers subjected to Hansen's Extremis, with the explosions being falsely attributed to a terrorist plot in order to cover up Extremis's flaws. Stark traces the Mandarin to Miami and infiltrates his headquarters using improvised weapons. He discovers the Mandarin is actually an English actor named Trevor Slattery, who is oblivious to the actions carried out in his image; Killian, who appropriated Hansen's Extremis research as a cure for his own disability and expanded the program to include injured war veterans, is the real Mandarin. After capturing Stark, Killian shows him Potts (whom he had kidnapped) being subjected to Extremis, 
+               in order to gain Stark's aid to fix Extremis's flaws and thus save Potts.</p>
+            <p>Stark escapes and reunites with Rhodes, discovering that Killian intends to attack President Ellis aboard Air Force One. Stark saves the surviving passengers and crew but cannot stop Killian from abducting Ellis and destroying Air Force One. Killian intends to kill Ellis on an oil platform on live television. On the platform, Stark goes to save Potts, as Rhodes saves the president. Stark summons his Iron Man suits, controlled remotely by J.A.R.V.I.S., to provide air support. Potts, having survived the Extremis procedure, kills Killian. Stark orders J.A.R.V.I.S. to remotely destroy all of the Iron Man suits as a sign of his devotion to Potts, and undergoes surgery to remove the shrapnel embedded near his heart. He pitches his obsolete chest arc reactor into the sea,
+               musing that he will always be Iron Man.</p>
+
+         <h4>Creation of Ultron:</h4>
+         <p>A few years later, Stark and the Avengers raid a Hydra facility commanded by Baron Wolfgang von Strucker, who has been experimenting on siblings Pietro and Wanda Maximoff using the scepter previously wielded by Loki. While the team fights outside, Stark enters the lab to retrieve the scepter, and finds it, along with Chitauri ships from the Battle of New York and androids under construction. Wanda sneaks up behind him and uses her mind manipulation powers to give him a haunting vision: the rest of the Avengers dead or dying on a dark world in space, with the Captain's shield broken in half on the ground. Rogers warns him "You could have saved us" before dying, and his words "Why didn't you do more?" 
+            are heard. He then sees a massive fleet of Chitauri ships fly into a gigantic portal leading to Earth. Stark awakens from the vision, and grabs Loki's scepter with resolve.
+            Returning to Stark Tower, Stark and Bruce Banner discover an artificial intelligence within the scepter's gem, and secretly decide to use it to complete Stark's "Ultron" global defense program. The unexpectedly sentient Ultron eliminates Stark's A.I. J.A.R.V.I.S. and attacks the Avengers at Stark Tower. Escaping with the scepter, Ultron builds an army of robot drones, kills Strucker, recruits the Maximoffs, who hold Stark responsible 
+            for their parents' deaths by his company's weapons. The Avengers find and attack Ultron, but Wanda subdues most of the team with personalized, disturbing visions, causing Banner to transform into the Hulk and rampage until Stark stops him with his anti-Hulk armor.</p> 
+         
+          <p>After hiding at a safe house for a time, Nick Fury arrives and encourages Stark and the others to form a plan to stop Ultron, who is discovered to have forced the team's friend Dr. Helen Cho to perfect a new body for him. The Maximoffs turn against Ultron when Wanda's powers reveal his plan to destroy humanity. Rogers, Romanoff, and Barton find Ultron and retrieve the synthetic body, but Ultron captures Romanoff. Returning to their headquarters in New York, the Avengers fight amongst themselves when Stark secretly uploads J.A.R.V.I.S.—who is still operational after hiding from Ultron inside the Internet—into the synthetic body. Thor returns to help activate the body, explaining that the gem on its brow—one of the six Infinity Stones, the most powerful objects in existence—was part of his vision. This "Vision" and the Maximoffs accompany Stark and the Avengers to Sokovia, where Ultron has used the remaining vibranium to build a machine to lift part of the capital city skyward, intending to crash it into the ground to cause global extinction. One of Ultron's drones is able to activate the machine. The city plummets, but Stark and Thor overload the machine and shatter the landmass.
+             The Avengers establish a new base, and Stark leaves the team in the hands of Rogers and Romanoff.</p>  
+           
+          <h4>Aftermath of the Battle of Sokovia:</h4>
+          <p>Some months after the Battle of Sokovia, U.S. Secretary of State Thaddeus Ross informs the Avengers that the United Nations (UN) is preparing to pass the Sokovia Accords, which will establish UN oversight of the team.
+             The Avengers are divided: Stark supports oversight because of his role in Ultron's creation and Sokovia's devastation, while Rogers has more faith in his own judgment than that of a government. Circumstances lead to Rogers and fellow super-soldier Bucky Barnes (framed for a terrorist attack) going rogue,
+             along with Sam Wilson, Wanda Maximoff, Clint Barton, and Scott Lang. Stark assembles a team composed of Romanoff, T'Challa, Rhodes, Vision, and Peter Parker to capture the renegades at Leipzig/Halle Airport. However, during the battle, Rogers and Barnes are able to escape. Stark learns that Barnes was framed and convinces Wilson to give him Rogers' destination. Without informing Ross, Stark goes to the Siberian Hydra facility and strikes a truce with Rogers and Barnes. They find that the other super-soldiers have been killed by Helmut Zemo, who plays footage that reveals that Barnes killed Stark's parents. Stark turns on them, dismembering Barnes' robotic arm. After an intense fight, Rogers finally manages to disable Stark's Iron Man armor and departs with Barnes, leaving his shield behind. Stark returns to New York to work on exoskeletal leg braces to allow Rhodes to walk again.
+             Steve Rogers sends a flip phone to Stark, his former ally and friend, to keep in contact.
+             When Ross calls informing him that Barton and the others have escaped Stark refuses to help.</p>  
+          <p>Peter Parker resumes his high school studies when Stark tells him he is not yet ready to become a full Avenger. Stark rescues Parker from nearly drowning after an encounter with Adrian Toomes as the Vulture. Stark warns Parker against further involvement with the criminals. Another weapon from Toomes malfunctions during a fight with Parker and tears the Staten Island Ferry in half. Stark helps Parker save the passengers before admonishing him for his recklessness and confiscating his suit. Parker realizes Toomes is planning to hijack a D.O.D.C. plane transporting weapons from Stark Tower to the team's new headquarters. After Parker thwarts the plan and saves Toomes from an explosion, Stark admits he was wrong about Parker and invites him to become an Avenger full-time, but Parker declines. Pepper emerges from a packed press conference, called to make the announcement, and Stark decides to use the opportunity to instead propose to Pepper.
+             At the end of the film, he returns the suit to Peter.</p>
+             
+             <h4>The Infinity War:</h4>
+          <p>In 2018, Stark and Pepper are in a New York City park discussing having children, when Bruce Banner, who had disappeared after the Battle of Sokovia, crash-lands at the Sanctum Sanctorum. Banner relays a warning to Stephen Strange, Wong, and Stark that the mad Titan Thanos plans to use the Infinity Stones to kill half of all life in the universe. Ebony Maw and Cull Obsidian arrive to retrieve the Time Stone, prompting Strange, Stark, Wong and Peter Parker to confront them. Although Cull Obsidian is incapacitated and thrown into Antarctica, Strange is captured by Maw. Stark and Parker sneak aboard Maw’s spaceship to rescue him. After successfully freeing Strange and killing Maw, the trio proceed to Thanos’ home planet Titan, where they meet members of the Guardians of the Galaxy. They form a plan to confront Thanos and remove the Infinity Gauntlet, but the plan goes awry; Thanos overpowers the group and impales Stark. Strange surrenders the Time Stone in exchange for Thanos sparing Stark. Thanos takes the stone and departs Titan for Earth, retrieves the final stone, 
+            and activates the Infinity Gauntlet. Stark and Nebula, stranded on Titan, watches as Parker and others are turned to dust. Having seen the possible futures resulting from the conflict, Strange, before succumbing, tells Stark that "there was no other way".</p>   
+            
+            <h4>Avenging the Fallen:</h4>
+            <p>Stark is saved from drifting in space by Carol Danvers and returned to Earth, where he and Pepper raise a daughter named Morgan over the next five years. In 2023, when Scott Lang seems to discover a way to travel through time, the Avengers approach Stark, who initially refuses, considering the idea dangerously hypothetical. Despite this he examines the matter privately, figures out how to do it successfully and agrees to help. Traveling through time, Stark fails to steal the Space Stone from an earlier version of himself following the Battle of New York, and instead goes further back to the 1970s to steal it from a SHIELD facility, where he has a moving conversation with a younger version of his father, Howard Stark. The Avengers successfully obtain all of the Infinity Stones before returning to the present, which are incorporated into a gauntlet made by Stark which Banner then uses to resurrect those that were disintegrated by Thanos. However, they are followed by a 2014 version of Thanos and his forces, who are summoned to 2023 by Nebula, who had previously been captured by Thanos and also replaced by her 2014 self. Following a climactic battle, Thanos obtains Stark's gauntlet and the two of them wrestle for control of it. Thanos is able to fling Stark away before attempting another snap, but discovers that Stark has caused all of the Infinity Stones to move to Stark's own armor. Stark then uses them to disintegrate Thanos and all of his forces, saving the universe but fatally injuring himself in the process due to the gamma radiation caused by the stones. He dies peacefully,
+               surrounded by Rhodes, Parker and Potts. A funeral attended by many heroes is later held for him at his homestead</p>
+
+        </div>
+        <div class= "col-md-3">
+            <img src="https://i.pinimg.com/originals/f8/89/32/f889323d87ae92dbd5da3b1193708dc3.gif " width="40px" length="40px" class="card-img" alt="...">
+            <div class = "test3">
+                <div class="subheader">
+                  <h5>Iron Man Armor:</h5>
                 </div>
-            </div>
-        <!-- </div> -->
-    </div> 
- </div>  
+                <!-- <div class="subheader2">
+              <p>Portrayed:    Robert Downey Jr.</p>
+          </div> -->
+          <div class="subheader3">
+              <!-- <h5>Appeared in:</h5> -->
+              <p>Mark I</p>
+              <p>Mark II</p>
+              <p>Mark III</p>
+              <p>Mark IV</p>
+              <p>Mark V</p>
+              <p>Mark VI</p>
+              <p>Mark VII</p>
+              <p>Mark VIII</p>
+              <p>Mark IX</p>
+              <p>Mark X</p>
+              <p>Mark I</p>
+              <p>Mark II</p>
+              <p>Mark III</p>
+              <p>Mark IV</p>
+              <p>Mark V</p>
+              <p>Mark VI</p>
+              <p>Mark VII</p>
+              <p>Mark VIII</p>
+              <p>Mark IX</p>
+              <p>Mark X</p>
+              <p>Mark I</p>
+              <p>Mark II</p>
+              <p>Mark III</p>
+              <p>Mark IV</p>
+              <p>Mark V</p>
+              <p>Click For More</p>
+              
+          </div>
+          <div class="subheader">
+            <h5>Cars:</h5>
+          </div>
+          <!-- <div class="subheader2">
+            <p>Real Name:   Anthony Edward Stark</p>
+        </div> -->
+        <div class="subheader3">
+          <!-- <h5>Occupations:</h5> -->
+          <p>Audi R8</p>
+          <p>Saleen S7</p>
+          <p>Tesla Roadster</p>
+          <p>Ford Flathead Roadster (1932)</p>
+          <p>Shelby Cobra (1967)</p>
+          <p>Audi R8 Spyder</p>
+          <p>Rolls Royce Phantom</p>
+          <p>Ghia Cadillac (1953)</p>
+          <p>Mercury Coupe (1949)</p>
+          <p>Wolf WR Ford Replica (1978)</p>
+          <p>Acura NSX</p>
+          <p>White Audi R8 e-tron</p>
+          <p>Red Audi R8 e-tron</p>
+          <p>Bugatti Veyron SS</p>
+          
+      </div>
+      <!-- <div class="subheader4">
+        <p>Status:  Deceased</p>
+      </div>
+      <div class="subheader4">
+        <p>age:  50's</p>
+      </div>
+      <div class="subheader4">
+        <p>Gender:  Male</p>
+      </div>
+      <div class="subheader4">
+        <p>Race:  Human</p>
+      </div>
+      <div class="subheader4">
+        <p>Nationality:   American</p>
+      </div>
+       -->
+          </div>      
+        </div>
+      </div>
+    </div>
+                
+      
+                       
+           
+
+     
 
 
 
@@ -162,8 +435,10 @@ timeOut();
 
 function timeOut () {
  $("#test").hide();
- setTimeout(function(){ $("body").css("background-image","url(https://images5.alphacoders.com/403/thumb-1920-403880.jpg)"); }, 8000);
- setTimeout(function(){ $("#test").fadeIn(); }, 8000);
+ $(".header").hide();
+ setTimeout(function(){ $("body").css("background-image","url(https://images5.alphacoders.com/403/thumb-1920-403880.jpg)"); }, 9300);
+ setTimeout(function(){ $("#test").fadeIn(); }, 9300);
+ setTimeout(function(){ $(".header").fadeIn(); },9300);
 };
 });
 
