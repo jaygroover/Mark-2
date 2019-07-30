@@ -3,6 +3,7 @@ var db = require("./models");
 var express = require("express");
 const mongo = require('mongodb').MongoClient;
 const client = require('socket.io').listen(4000).sockets;
+var mongoose = require('mongoose');
 
 // Set up the express app
 var app = express();
@@ -37,6 +38,11 @@ if (process.env.NODE_ENV === "test") {
       PORT
     );
   });
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongochat";
+
+// mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
   // Connect to mongo
 mongo.connect('mongodb://127.0.0.1/mongochat', function(err, db){
