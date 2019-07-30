@@ -8,6 +8,6 @@ module.exports = function(app) {
 
   app.get("/livechat", function(req, res) {
     console.log("livechat");
-    res.sendFile(path.join(__dirname, "../app/Public/livechat.html"));
+    res.sendFile(path.join(__dirname, "/../app/Public/livechat.html"));
   });
 };
