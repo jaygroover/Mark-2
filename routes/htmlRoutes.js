@@ -5,4 +5,8 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../app/Public/index.html"));
   });
+
+  app.get("/chat", function(req, res) {
+    res.sendFile(path.join(__dirname, "../app/Public/livechat.html"));
+  });
 };
