@@ -39,10 +39,16 @@ if (process.env.NODE_ENV === "test") {
     );
   });
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongochat";
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongochat";
 
 // mongoose.connect(MONGODB_URI);
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+// mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
+
+// connect Mongoose to your DB
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mongochat');
+
 
   // Connect to mongo
 mongo.connect('mongodb://127.0.0.1/mongochat', function(err, db){
