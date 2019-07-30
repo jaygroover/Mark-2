@@ -6,8 +6,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../app/Public/index.html"));
   });
 
-  app.get("/livechat", function(req, res) {
-    console.log("livechat");
-    res.sendFile(path.join(__dirname, "/../app/Public/livechat.html"));
-  });
+  // app.get("/livechat", function(req, res) {
+  //   console.log("livechat");
+  //   res.sendFile(path.join(__dirname, "/../app/Public/livechat.html"));
+  // });
 };

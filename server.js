@@ -23,6 +23,10 @@ require("./routes/supplier-routes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 // require("./routes/account-routes.js")(app);
 
+app.get("/livechat", function(req, res) {
+    console.log("livechat");
+    res.sendFile(__dirname + "/livechat.html");
+  });
 // ensures that data in server does not get cleared
 var syncOptions = { force: false };
 
