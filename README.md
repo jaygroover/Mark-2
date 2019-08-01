@@ -9,15 +9,25 @@ tech used for this site:
 
 
 HTML
+
 CSS
+
 JavaScript
+
 Bootstrap
+
 Node
+
 Express
+
 React/JSX
+
 Mongo DB
+
 Socket Io.
+
 Marvel API
+
 Youtube API
 
 
