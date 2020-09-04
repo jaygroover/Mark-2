@@ -10,7 +10,7 @@
     "dotenv": "^8.0.0",
     "express": "4.17.1",
     "mongo": "^0.1.0",
-    "mongodb": "^2.2.36",
+    "mongodb": "^3.1.13",
     "mongoose": "^5.6.7",
     "socket.io": "2.2.0"
   },
